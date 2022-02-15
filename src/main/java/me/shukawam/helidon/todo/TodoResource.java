@@ -4,6 +4,7 @@ import com.tangosol.net.NamedMap;
 import com.tangosol.util.Filter;
 import com.tangosol.util.Filters;
 
+import javax.inject.Inject;
 import javax.ws.rs.*;
 import java.util.Collection;
 import java.util.Comparator;
@@ -17,6 +18,7 @@ import java.util.UUID;
  */
 @Path("/tasks")
 public class TodoResource {
+    @Inject
     private NamedMap<UUID, Task> tasks;
 
     @GET

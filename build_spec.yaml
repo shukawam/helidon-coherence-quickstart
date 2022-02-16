@@ -8,20 +8,20 @@ env:
   vaultVariables:
     repository: ocid1.vaultsecret.oc1.ap-tokyo-1.amaaaaaassl65iqa3a6633az4kcvuhacslbefj57tncpysuy5y7ozldwkhyq
   exportedVariables:
-    - docker_server
-    - repository
-    - tag
+    - DOCKER_SERVER
+    - REPOSITORY
+    - TAG
 
 steps:
   - type: Command
     name: "Export variables"
     command: |
-      docker_server=${docker_server}
-      repository=${repository}
-      tag=`echo ${OCI_BUILD_RUN_ID} | rev | cut -c 1-7`
-      echo "docker_server:" ${docker_server}
-      echo "repository:" ${repository}
-      echo "tag:" ${tag}
+      DOCKER_SERVER=${docker_server}
+      REPOSITORY=${repository}
+      TAG=`echo ${OCI_BUILD_RUN_ID} | rev | cut -c 1-7`
+      echo "DOCKER_SERVER:" ${DOCKER_SERVER}
+      echo "REPOSITORY:" ${REPOSITORY}
+      echo "TAG:" ${TAG}
     onFailure:
       - type: Command
         commnd: |

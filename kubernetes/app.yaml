@@ -19,4 +19,4 @@ kind: Coherence
 metadata:
   name: helidon-coherence-quickstart
 spec:
-  image: ${docker_server}/${repository}/helidon-coherence-quickstart:${tag}
+  image: ${DOCKER_SERVER}/${REPOSITORY}/helidon-coherence-quickstart:${TAG}

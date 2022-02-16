@@ -120,7 +120,7 @@
                                 </image>
                             </from>
                             <to>
-                                <image>coherence/${project.artifactId}</image>
+                                <image>${project.artifactId}</image>
                                 <tags>
                                     <tag>${project.version}</tag>
                                 </tags>

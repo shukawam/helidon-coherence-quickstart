@@ -27,15 +27,15 @@ steps:
         commnd: |
           echo "Failure successfully handled"
         timeoutInSeconds: 60
-  - type: Command
-    name: "Install library"
-    command: |
-      mvn clean install
-    onFailure:
-      - type: Command
-        command: |
-          echo "Failure successfully handled"
-        timeoutInSeconds: 60
+  # - type: Command
+  #   name: "Install library"
+  #   command: |
+  #     mvn clean install
+  #   onFailure:
+  #     - type: Command
+  #       command: |
+  #         echo "Failure successfully handled"
+  #       timeoutInSeconds: 60
   - type: Command
     name: "Build Docker Image"
     command: |
